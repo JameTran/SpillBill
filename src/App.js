@@ -9,6 +9,9 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
 import Start from "./pages/Start";
+import Eventdetails from "./pages/Eventdetails";
+import Newitem from "./pages/Newitem";
+
 
 function App() {
   return (
@@ -17,8 +20,10 @@ function App() {
     <div className='container'>
       <Routes>
         <Route path="/events" element={<Events/>}></Route>
+        <Route path="/events/eventdetails" element={<Eventdetails/>}></Route>
         <Route path="/friends" element={<Friends/>}></Route>
         <Route path="/items" element={<Items/>}></Route>
+        <Route path="/items/newitem" element={<Newitem/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/profile" element={<Profile/>}></Route>
         <Route path="/signup" element={<Signup/>}></Route>
