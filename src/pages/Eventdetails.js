@@ -85,6 +85,7 @@ export default function Eventdetails() {
         <h2>Total Price: {total_price}</h2>
         <ul>{listItems}</ul>
         <Pie data={data}></Pie>
+        <button className="btn btn-primary btn-sm m-2" >See Details</button>
 
     </>
     ); 
