@@ -7,7 +7,7 @@ const Header = ({ title }) => {
     const onClick = () => {
         //console.log("Link this to Harsh's page")
         
-        navigate("/newevent")
+        navigate("/events/newevent")
     }
 
 

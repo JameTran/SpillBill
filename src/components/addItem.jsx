@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import SplitMethod from "./splitMethod";
 
+
 class AddItem extends Component {
     state = {
         items: [],
@@ -50,6 +51,8 @@ class AddItem extends Component {
         items.push(newItem);
         this.setState({ items });
     };
+
+    
 
     render() {
         const { splitMethods, friendsList } = this.props;
@@ -122,10 +125,12 @@ class AddItem extends Component {
                         <button
                             className="btn btn-primary btn-sm m-2"
                             onClick={() =>
-                                this.props.goBack(this.state.items)
+                                {
+                                    this.props.goBack(this.state.items);
+                                }
                             }
                         >
-                            Go Back
+                            Save
                         </button>
                     </div>
                 </div>

@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-import { useNavigate } from "react-router-dom"
-import "../App.css";
-import NavBar from "../components/navBar";
 import AddItem from "../components/addItem";
 
-export default function NewEvent() {
-    const state = {
+class App extends Component {
+    state = {
         friendsList: ["Ayman", "Harsh", "Jame", "Logan", "Syed"],
         splitMethods: [
             {
@@ -25,21 +22,19 @@ export default function NewEvent() {
             },
         ],
         items:[],
+    };
+
+    handleGoBack = items => {
+        console.log(items);
     }
 
-    const navigate = useNavigate();
-
-    const handleGoBack = (items) => {
-        console.log(items)
-        navigate("/Events")
+    render() {
+        return (
+            <React.StrictMode>
+                <AddItem splitMethods={this.state.splitMethods} friendsList={this.state.friendsList} items={this.state.items} goBack={this.handleGoBack}/>
+            </React.StrictMode>
+        );
     }
-
-    return (
-        <React.StrictMode>
-            <AddItem splitMethods={this.state.splitMethods} friendsList={this.state.friendsList} items={this.state.items} goBack={this.handleGoBack}/>
-            <NavBar />
-        </React.StrictMode>
-    );
 }
 
-
+export default App;
