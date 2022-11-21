@@ -11,7 +11,8 @@ import Signup from "./pages/Signup";
 import Start from "./pages/Start";
 import Eventdetails from "./pages/Eventdetails";
 import Newitem from "./pages/Newitem";
-import NewEvent from "./pages/NewEvent"
+import NewEvent from "./pages/NewEvent";
+
 
 
 function App() {
