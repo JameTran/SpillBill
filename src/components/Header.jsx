@@ -6,10 +6,8 @@ const Header = ({ title }) => {
     const navigate = useNavigate()
     const onClick = () => {
         //console.log("Link this to Harsh's page")
-        
-        navigate("/events/newevent")
+       navigate("/items/newitem")
     }
-
 
     return (
     <header className='header'>

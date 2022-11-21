@@ -6,14 +6,14 @@ class SplitMethod extends Component {
     render() {
         return (
             <React.Fragment>
-                <div style={{display: "block", float: "left" }}>
+                <div style={{display: "block", float: "left", width: 130 }}>
                     <div
                         onChange={this.props.onSelect}
                         className="m-2"
                     >
                         <label
                             htmlFor={this.props.method.id}
-                            style={{ width: 100, display: "inline-block" }}
+                            style={{ width: 120, display: "inline-block" }}
                         >
                             {this.props.method.description}
                         </label>

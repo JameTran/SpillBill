@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div className="container">
       <Header 
-        title = {"Details"}
+        title = {"Item Details"}
       />
       {items.length > 0 ? (<Items items = {items} onDelete = {deleteItem} onClick = {eventPage} />) : "No Events"}
     </div>

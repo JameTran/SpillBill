@@ -24,7 +24,9 @@ class AddItem extends Component {
 
     handleAddFriend = () => {
         let addedFriends = [...this.state.addedFriends];
-        addedFriends.push(this.state.selectedFriend);
+        if (!addedFriends.includes(this.state.selectedFriend)) {
+            addedFriends.push(this.state.selectedFriend);
+        }
         this.setState({ addedFriends });
     };
 
@@ -50,6 +52,7 @@ class AddItem extends Component {
         const items = [...this.state.items];
         items.push(newItem);
         this.setState({ items });
+        this.setState({...this.state, addedFriends: []})
     };
 
     
@@ -59,9 +62,19 @@ class AddItem extends Component {
 
         return (
             <React.Fragment>
-                <div style={{ margin: 20, display: "inline-grid" }}>
-                    <div>
-                        <span>New Item: </span>
+                <div style={{ margin: 20, display: "inline-grid", textAlign: "center"}} >
+                    <div >
+                        <span >Event Name: </span>
+                        <input
+                            type="text"
+                            id="itemName"
+                            name="itemName"
+                            placeholder="Edit name"
+                            size="10"
+                            onChange={this.handleName}
+                        />
+                        <br></br>
+                        <span >New Item: </span>
                         <input
                             type="text"
                             id="itemName"
@@ -70,6 +83,7 @@ class AddItem extends Component {
                             size="10"
                             onChange={this.handleName}
                         />
+                        <br></br>
                         <span> Price: </span>
                         <input
                             type="number"
@@ -80,7 +94,8 @@ class AddItem extends Component {
                             onChange={this.handlePrice}
                         />
                     </div>
-                    <div>
+                    <br></br>
+                    <div >
                         {splitMethods.map((method) => (
                             <SplitMethod
                                 key={method.id}
@@ -89,6 +104,7 @@ class AddItem extends Component {
                             />
                         ))}
                     </div>
+                    <br></br>
                     <div>
                         <label htmlFor="friend">Add friend(s):</label>
                         <br />
@@ -132,6 +148,14 @@ class AddItem extends Component {
                         >
                             Save
                         </button>
+                        <br></br>
+                        <br></br>
+                        Participants:
+                        <ul style={{listStyleType: "none"}}> 
+                            {this.state.addedFriends.map(friend => {
+                                return <li>{friend}</li>
+                            })}
+                        </ul>
                     </div>
                 </div>
             </React.Fragment>
