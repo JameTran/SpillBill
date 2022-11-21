@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
 import Start from "./pages/Start";
+import NewEvent from "./pages/NewEvent";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/profile" element={<Profile/>}></Route>
         <Route path="/signup" element={<Signup/>}></Route>
+        <Route path="/events/newevent" element={<NewEvent/>}></Route>
         <Route path="/" element={<Start/>}></Route>
       </Routes>
     </div>
