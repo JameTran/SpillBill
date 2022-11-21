@@ -32,7 +32,7 @@ export default function Friends() {
     const listItems = friendsList.map((friend) =>
     <li>
         {friend}
-        <button onClick={() => deleteFunction(friend)}> Delete</button>
+        <button className="btn btn-primary btn-sm m-2" onClick={() => deleteFunction(friend)}> Delete</button>
     </li>
 
 );
@@ -43,13 +43,13 @@ export default function Friends() {
         <ul>
             {listItems}
         </ul>
-        <button onClick={() => addPopupFunction()}> Add New Friend</button>
+        <button className="btn btn-primary btn-sm m-2" onClick={() => addPopupFunction()}> Add New Friend</button>
         <div style={{visibility: isVisible ? 'visible' : 'hidden'}}>
         <form onSubmit={() => addNewFriend()}>
             <label>
                 <input type="text" value={newfriendname} onChange={handleChange} name="name"/>
             </label>
-            <input type="submit" name="Submit"/>
+            <input className="btn btn-primary btn-sm m-2" type="submit" name="Submit"/>
         </form>
         </div >
         </>

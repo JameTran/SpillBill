@@ -1,7 +1,7 @@
 import Header from "../components/Header";
 import Items from "../components/Items"
 import { useState } from "react";
-
+import './Events.css';
 
 const App = () => {
   const [items, setItems] = useState(
@@ -19,7 +19,7 @@ const App = () => {
     },
   ])
 
-  const deleteTask = (id) => { 
+  const deleteItem = (id) => { 
     setItems(items.filter((item) => item.id !== id))
   }
 
@@ -32,7 +32,7 @@ const App = () => {
       <Header 
         title = {"Details"}
       />
-      {items.length > 0 ? (<Items items = {items} onDelete = {deleteTask} onClick = {eventPage} />) : "No Events"}
+      {items.length > 0 ? (<Items items = {items} onDelete = {deleteItem} onClick = {eventPage} />) : "No Events"}
     </div>
   );
 }
