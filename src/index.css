@@ -13,8 +13,10 @@ body {
 }
 
 :root {
-  background: rgb(245,247,246);
-  background: linear-gradient(90deg, rgba(245,247,246,1) 0%, rgba(92,160,242,1) 100%);
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
 }
 
 .container {
@@ -22,7 +24,8 @@ body {
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid rgb(16, 121, 201);
+  border: 2px solid #555;
+  background-color: rgba(256,256,256,0.4);
   padding: 30px;
   border-radius: 5px;  
 }
@@ -137,4 +140,68 @@ footer {
   text-align: center;
   justify-content: space-between;
 
+}
+
+.profile-screen{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  justify-content: center;
+}
+
+.profile-title{
+  text-align: center;
+  justify-content: space-between;
+  padding-bottom: 50;
+}
+
+.register-form input {
+  margin: 2px;
+  padding: 2px;
+  border: #000;
+  border-radius: 5px;
+  text-align: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+hr {
+  border: 1px solid #555;
+  border-radius: 2px;
+}
+
+.picture {
+  border: 2px solid #555;
+  border-radius: 5px;
+}
+
+.profile-screen h3 {
+  padding-left: 10px;
+}
+
+.profile-bio {
+  margin-top: 50px;
+  background-color: rgba(256,256,256,.4);
+  padding: 10px;
+  border: 2px solid #555;
+  border-radius: 5px;
+}
+
+#remember-label {
+  margin-top: 25px;
+}
+
+#pass-label {
+  margin-top: 15px;
 }
