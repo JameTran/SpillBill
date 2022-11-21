@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom"
 export default function Signup() {
     const navigate = useNavigate();
     return (
-        <form>
+        <div className="entry-form">
+            <h1>Register</h1>
+        <form className="register-form">
             <label for="fname"></label>
             <input type="text" placeholder="First Name" id="fname" name="fname" />
             <label for="lname"></label>
@@ -18,9 +20,11 @@ export default function Signup() {
             <input type="password" placeholder="Confirm Password" id="password=" name="email" />
             <label for="phone"></label>
             <input type="tel" placeholder="Phone Number (optional)" id="phone=" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
-            <button type="button" onClick={() =>navigate("/login")}> Have an account? Login</button>
+            <button type="button" className="btn btn-primary btn-sm m-2" > Register </button>
+            <button type="button" className="btn btn-primary btn-sm m-2" onClick={() =>navigate("/login")}> Have an account? Login</button>
 
         </form>
+        </div>
     );
 
 }
