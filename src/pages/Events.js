@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Tasks from "../components/Tasks"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"
 import './Events.css'
 
 
@@ -24,8 +25,10 @@ const App = () => {
     setTasks(tasks.filter((task) => task.id !== id))
   }
 
-  const eventPage = (id) => {
+  const navigate = useNavigate();
+  function eventPage(id) {
     console.log("Path to events's page", id)
+    navigate("/events/eventdetails")
   }
 
   return (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 export default function Friends() {
-    const initFriend = ["Ayman", "Harsh", "Jame", "Logan", "Syed"];
+    const initFriend = ["Ayman", "Harsh", "Jame", "Logan", "Syed",];
     const [friendsList, SetFriends] = useState(initFriend);
     const [isVisible, setisVisible] = useState(false);
     const [newfriendname, setnewfriendname] = useState('Enter Name');
