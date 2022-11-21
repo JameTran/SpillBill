@@ -46,7 +46,7 @@ export default function Eventdetails() {
     const listItems = Object.keys(friends_price).map((key) =>
         <li>
             {key} owes: {friends_price[key]}
-            <button onClick={() => settlefunction(key)}> Settle Up</button>
+            <button className="btn btn-primary btn-sm m-2" onClick={() => settlefunction(key)}> Settle Up</button>
         </li>
     );
 
