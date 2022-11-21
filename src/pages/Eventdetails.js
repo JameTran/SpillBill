@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
+import { useNavigate } from "react-router-dom";
 
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -9,14 +10,14 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function Eventdetails() {
 
-    let eventname = "Restaurant1"
+    let eventname = "Five Guys"
 
     const initial_friends_price = {
-        "Syed": 72.75,
-        "Jame": 185.23,
-        "Logan": 323.25,
-        "Harsh": 25.25,
-        "Ayman": 99.12,
+        "Syed": 13.47,
+        "Jame": 11.75,
+        "Logan": 8.08,
+        "Harsh": 6.85,
+        "Ayman": 8.65,
 
     };
 
@@ -77,7 +78,10 @@ export default function Eventdetails() {
         ],
       };
     
-
+      const navigate = useNavigate();
+      const eventPage = () => {
+        navigate("/items")
+      }
 
     return(
     <>
@@ -85,7 +89,7 @@ export default function Eventdetails() {
         <h2>Total Price: {total_price}</h2>
         <ul>{listItems}</ul>
         <Pie data={data}></Pie>
-        <button className="btn btn-primary btn-sm m-2" >See Details</button>
+        <button className="btn btn-primary btn-sm m-2" onClick = {() => eventPage()}> See Details</button>
 
     </>
     ); 

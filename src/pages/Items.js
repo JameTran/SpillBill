@@ -8,14 +8,38 @@ const App = () => {
     [{
         id:3,
         text: "Large Fries",
-        participants: "Logan · Syed · Jame",
-        price: 10
+        participants: "Logan · Syed · Jame · Ayman",
+        price: 7.23
     },
     {
         id:4,
-        text: "Double Cheeseburger",
+        text: "Cheeseburger",
         participants: "Ayman · Harsh",
-        price: 14
+        price: 10.80
+    },
+    {
+        id:5,
+        text: "Strawberry Milkshake",
+        participants: "Jame · Syed",
+        price: 7.35
+    },
+    {
+        id:6,
+        text: "Large Cajun Fries",
+        participants: "Logan · Syed · Jame · Ayman · Harsh",
+        price: 7.23
+    },
+    {
+      id:7,
+      text: "Hamburger",
+      participants: "Logan · Jame",
+      price: 9.65
+    },
+    {
+      id:8,
+      text: "Hot Dog",
+      participants: "Syed",
+      price: 6.54
     },
   ])
 

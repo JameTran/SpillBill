@@ -9,15 +9,9 @@ const App = () => {
   const [tasks, setTasks] = useState(
     [{
         id:3,
-        text: "Escape Room",
+        text: "Five Guys",
         day: "Feb 3rd,2022",
-        price: 50
-    },
-    {
-        id:4,
-        text: "Nusr-et Steakhouse",
-        day: "Feb 23rd,2022",
-        price: 1150
+        price: "705.60"
     },
   ])
 
